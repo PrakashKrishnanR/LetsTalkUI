@@ -1,0 +1,55 @@
+<block-ui></block-ui>
+<ng-container *ngIf="post">
+  <mat-card>
+    <span class="mat-card-title"><a class="mat-primary" routerLink="/view-subject/{{post.subtalkId}}" style="text-decoration: none;">{{post.subtalkname}}</a></span>
+    <div class="postdate">
+      <span> Posted by <a routerLink="/user/{{post.username}}" style="text-decoration: none;">{{post.username}} .</a></span>
+      <span> {{post.duration}}</span>
+      <div class="myblock">
+        <app-vote [post]="post" ></app-vote>
+      </div>
+      <mat-icon *ngIf="post.createdByUser" (click)="deletePost(post)" class="deleteIcon">delete</mat-icon>
+    </div>
+    <mat-divider></mat-divider>
+
+    <mat-card-content>
+      <div class="posts">
+        <a  routerLink="{{post.url}}" style="text-decoration: none;">{{post.postname}}</a>
+        <p [innerHTML]=post.description></p>
+      </div>
+      <mat-divider></mat-divider>
+    </mat-card-content>
+    <mat-card-actions>
+      <form [formGroup]="form" fxLayout="column">
+          <mat-form-field>
+            <textarea matInput formControlName="comment" placeholder="Your Comment"></textarea>
+          </mat-form-field>
+      </form>
+      <button mat-raised-button color="primary" (click)="onSubmit()"  [disabled]="form.invalid">
+        Post Comment
+      </button>
+    </mat-card-actions>
+    <mat-divider></mat-divider>
+
+    <mat-card-footer>
+      <ng-container *ngIf="comments$">
+        <ng-container  *ngFor="let comment of comments$">
+            <div class="myfooter">
+              <div class="username">
+                <span>{{comment.username}}</span>
+              </div>
+              <div class="postdate">
+                <span> Posted {{comment.duration}}</span>
+                <mat-icon class="deleteIcon" *ngIf="comment.canDeleteComment" (click)="deleteComment(comment)">delete</mat-icon>
+              </div>
+            </div>
+            <div class="myfooter">
+              <span>{{comment.text}}</span>
+            </div>
+          </ng-container>
+          <mat-divider></mat-divider>
+        </ng-container>
+    </mat-card-footer>
+  </mat-card>
+</ng-container>
+

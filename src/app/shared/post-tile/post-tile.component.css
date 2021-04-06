@@ -1,0 +1,51 @@
+.mat-card-title {
+  display: inline;
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+}
+
+.mat-card {
+  margin-top: 1rem;
+  margin-left: 10%;
+  margin-bottom: 0.3rem;
+
+}
+.postdate{
+  font-size: 0.8rem;
+  display: inline-flex;
+  color: darkgray;
+  padding-left: 0.3rem;
+}
+
+.myblock{
+  padding-left: 5px;
+  display: inline-block;
+}
+.fa-clickable {
+  cursor:pointer;
+  outline:none;
+}
+.posts{
+  display: inline-block;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 5px;
+}
+
+
+.cardFooter{
+  padding-top: 5px;
+}
+.mySpinner{
+  left: 50%;
+}
+
+.deleteicon{
+  color: saddlebrown;
+  margin-bottom: 0.3rem;
+  cursor: pointer;
+}
+.mat-flat-button{
+
+}

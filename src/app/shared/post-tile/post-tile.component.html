@@ -1,0 +1,33 @@
+<ng-container *ngFor="let post of posts$">
+  <mat-card>
+  <block-ui></block-ui>
+  <span class="mat-card-title"><a class="mat-primary" routerLink="/view-subject/{{post.subtalkId}}" style="text-decoration: none;">{{post.subtalkname}}</a></span>
+  <div class="postdate">
+    <span> Posted by <a routerLink="/user/{{post.username}}" style="text-decoration: none;">{{post.username}} .</a></span>
+    <span> {{post.duration}}</span>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-content>
+    <div class="posts">
+      <a  routerLink="/view-post/{{post.postId}}" style="text-decoration: none;">{{post.postname}}</a>
+      <p [innerHTML]=post.description></p>
+    </div>
+    <mat-divider></mat-divider>
+
+    <div class="cardFooter">
+      <fa-icon [icon]="faComment"></fa-icon>
+      <span>Comments({{post.commentCount}})  </span>
+      <button mat-flat-button color="primary" (click)="gotoPost(post.postId)">View Comments</button>
+      <div class="myblock">
+        <app-vote [post]="post" ></app-vote>
+      </div>
+    </div>
+  </mat-card-content>
+  </mat-card>
+</ng-container>
+<mat-spinner strokeWidth="3" [diameter]="30" style="margin-left:100px;"
+             *ngIf="inFlightRequest" color="primary" class="mySpinner">
+</mat-spinner>
+

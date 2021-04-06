@@ -1,0 +1,25 @@
+.mat-card-footer{
+  padding-bottom: 1rem;
+}
+.mat-raised-button{
+  margin-left: 1rem;
+}
+.mat-card{
+  margin-top: 1rem;
+  margin-left: 5%;
+}
+.mat-card-header{
+  padding-bottom: 1rem;
+  font-weight: bold;
+  color: darkblue;
+}
+.mat-card.instruction{
+  margin-top: 1rem;
+  margin-left: 5%;
+  background-color: mintcream;
+}
+.mat-card-header.instruction{
+  padding-bottom: 1rem;
+  font-weight: bold;
+  color: dimgray;
+}

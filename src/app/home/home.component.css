@@ -1,0 +1,6 @@
+.fab-bottom {
+  position: fixed;
+  bottom: 0.3rem;
+  left: 2%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,17 @@
+.mat-card-content{
+  margin-top: 1rem;
+}
+.mat-card {
+  margin-top: 1rem;
+  margin-left: 1%;
+  max-width: 50%;
+  height: 8rem;
+  background-color: mintcream;
+}
+.fab-bottom {
+  position: fixed;
+  bottom: 0.3rem;
+  left: 2%;
+  transform: translateX(-50%);
+}
+

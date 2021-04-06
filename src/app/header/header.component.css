@@ -1,0 +1,41 @@
+.glass-wrap {
+  overflow: hidden;
+
+  background: linear-gradient(to bottom right, lightgray , lightgray);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3), inset 5px -5px 0px 5px rgba(200, 200, 200, 0.15), inset -2px -2px 0px 5px rgba(195, 195, 195, 0.15);
+}
+img {
+  width: 60%;
+  padding: 0px;
+  border-radius: 0.5rem;
+
+}
+a{
+  margin-top: 0.5rem;
+}
+.mat-toolbar-row, .mat-toolbar-single-row {
+  padding:1px;
+}
+.login{
+  position: absolute;
+  right: 8rem;
+  margin-bottom: 0.4rem;
+
+  text-align: right;
+}
+.signup{
+  position: absolute;
+  right: 2rem;
+  margin-bottom: 0.4rem;
+
+  text-align: right;}
+
+.profile{
+  position: absolute;
+  right: 2rem;
+
+  text-align: right;
+}
+.mat-label{
+
+}

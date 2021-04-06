@@ -1,0 +1,27 @@
+mat-card {
+  max-width: 30%;
+  margin: 5em auto;
+  text-align: center;
+}
+
+mat-form-field {
+  display: block;
+}
+.mat-card-title{
+  color: darkblue;
+}
+.signupBackground{
+  background-image: url("../../assets/sign_up.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-filter: blur(1px);
+}
+.passwordLock{
+  padding-left: 0.5rem;
+  cursor: pointer;
+  font-size: 15px;
+}
+

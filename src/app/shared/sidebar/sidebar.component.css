@@ -1,0 +1,28 @@
+img {
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+}
+.mat-card-title {
+  display: inline;
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+}
+
+.mat-card {
+  margin-top: 1rem;
+  width: 70%;
+  margin-left: 4.5em;
+  border-radius: 0.5rem;
+
+  border-color: cadetblue;
+}
+
+.mat-card-content{
+  padding-top: 1rem;
+}
+.mat-raised-button{
+  margin-top: 0.3rem;
+
+}

@@ -1,0 +1,3 @@
+<fa-icon  (click)="upVote()"  class="btn" [icon]="thumbsUp" [style.color]="post.upVote ? 'green': ''"></fa-icon>
+<span> {{post.voteCount}} </span>
+<fa-icon (click)="downVote()" class="btn" [icon]="thumbsDown" [style.color]="post.downVote ? 'red': ''"></fa-icon>

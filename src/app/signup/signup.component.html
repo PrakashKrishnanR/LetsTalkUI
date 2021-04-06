@@ -1,0 +1,28 @@
+
+<div class="signupBackground">
+
+</div>
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="form" >
+      <mat-card-title>
+        Sign Up
+      </mat-card-title>
+      <mat-divider></mat-divider>
+      <mat-form-field class="full-width-input">
+        <input matInput placeholder="Email" formControlName="emailId" required>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input
+          matTooltip="Min length should be 7"
+          [matTooltipPosition]="position.value"
+          matInput type="password" placeholder="Password" formControlName="password" required>
+      </mat-form-field>
+      <button mat-raised-button class="mat-primary" (click)="onSubmit()"  [disabled]="form.invalid">
+               Sign Up
+        </button>
+        <span> Already registered?  <a routerLink="/login">LOGIN</a></span>
+    </form>
+  </mat-card-content>
+</mat-card>
+

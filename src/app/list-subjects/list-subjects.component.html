@@ -1,0 +1,26 @@
+<div fxLayout="row wrap" fxFlex="100" >
+  <div fxFlex="70">
+    <mat-card>
+      <block-ui></block-ui>
+      <mat-card-title>
+        Talk Subjects
+      </mat-card-title>
+      <mat-divider></mat-divider>
+      <mat-card-content >
+        <mat-list >
+          <mat-list-item *ngFor="let subtalk of subtalk$">
+            <a routerLink="/list-subjects/{{subtalk.id}}" style="text-decoration: none"> {{subtalk.name}} </a>
+            <mat-icon *ngIf="subtalk.deleteEnabled" (click)="deleteSubject(subtalk.id)">delete</mat-icon>
+            <mat-divider></mat-divider>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+  <div fxFlex="30">
+    <app-sidebar></app-sidebar>
+  </div>
+
+</div>
+

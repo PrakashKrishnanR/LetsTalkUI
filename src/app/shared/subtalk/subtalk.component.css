@@ -1,0 +1,17 @@
+.mat-card-title {
+  display: inline;
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  color: darkblue;
+}
+
+.mat-card {
+  margin-top: 1rem;
+  width: 70%;
+  margin-left: 4.5rem;
+  border-radius: 0.5rem;
+
+}
+.mat-card-content{
+  padding-top: 1rem;
+}

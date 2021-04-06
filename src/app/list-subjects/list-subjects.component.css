@@ -1,0 +1,19 @@
+.mat-card-title {
+  display: inline;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: darkblue;
+}
+
+.mat-card {
+  margin-top: 1rem;
+  margin-left: 10%;
+  text-align: center;
+}
+
+.mat-icon{
+  color: saddlebrown;
+  cursor: pointer;
+}
+
+

@@ -1,0 +1,14 @@
+<block-ui></block-ui>
+<div fxLayout="row wrap" fxFlex="100" >
+  <app-post-tile infiniteScroll
+                 [infiniteScrollThrottle]="500"
+                 (scrolled)="onScroll()" [posts$]="posts$"
+                 [inFlightRequest]="inflightRequest"[posts$]="posts$" fxFlex="70"></app-post-tile>
+  <div fxLayout="column" fxFlex="25">
+    <app-search (SearchEvent)="startSearch($event)"></app-search>
+    <app-sidebar ></app-sidebar>
+<!--    <app-subtalk></app-subtalk>-->
+  </div>
+</div>
+<button mat-mini-fab class="fab-bottom" (click)="movetoTop()"> <mat-icon>north</mat-icon> </button>
+

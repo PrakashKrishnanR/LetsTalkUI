@@ -1,0 +1,25 @@
+<block-ui></block-ui>
+
+<mat-divider></mat-divider>
+<div fxLayout="row wrap" fxFlex="100" >
+  <mat-card fxFlex="10">
+    <mat-card-content>
+         <p>You have posted({{postCount}}) times.
+          Please find your post history here</p>
+    </mat-card-content>
+  </mat-card>
+  <app-post-tile
+    infiniteScroll
+    [infiniteScrollDistance]="0.5"
+    [infiniteScrollThrottle]="500"
+    (scrolled)="onScroll()"
+    [posts$]="posts$"
+    [inFlightRequest]="inflightRequest"
+    fxFlex="60"></app-post-tile>
+  <div fxLayout="column" fxFlex="25">
+    <app-search (SearchEvent)="startSearch($event)"></app-search>
+    <app-sidebar ></app-sidebar>
+    <app-subtalk></app-subtalk>
+  </div>
+</div>
+<button mat-mini-fab color="accent" class="fab-bottom" (click)="movetoTop()"> <mat-icon>north</mat-icon> </button>

@@ -1,0 +1,23 @@
+
+.searchbar{
+  display: flex;
+}
+.searchIcon{
+  cursor: pointer;
+}
+
+.input_filed{
+  flex: 1;
+  border: none;
+  outline: none;
+
+  /*border-radius: 0.5rem;*/
+}
+.mat-card {
+  margin-top: 1rem;
+  width: 70%;
+  margin-left: 4.5em;
+  border-radius: 0.5rem;
+  border-color: cadetblue;
+
+}

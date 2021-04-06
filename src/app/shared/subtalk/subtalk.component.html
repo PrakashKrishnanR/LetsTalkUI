@@ -1,0 +1,15 @@
+
+<mat-card>
+  <mat-card-title><a style="text-decoration: none;color: darkblue" routerLink="/list-subjects">Talk subjects</a> </mat-card-title>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <span *ngFor="let sub of subtalk$">
+        <span ><a routerLink="/view-subject/{{sub.id}}" style="text-decoration: none;">{{sub.name}}</a></span>
+      <hr/>
+    </span>
+    <div style="text-align: center" *ngIf="displayViewAll">
+      <a style="font-weight: bold" routerLink="/list-subjects" style="text-decoration: none;">View All</a>
+    </div>
+
+  </mat-card-content>
+</mat-card>
